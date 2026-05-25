@@ -501,11 +501,11 @@ function linkThumbHtmlMini(l){
 }
 
 function linkFbMiniStr(ck, domain){
-  const cm=CAT_MAP[ck]||CAT_MAP.other;
   return`<div class="link-mini-fb">
-    <div class="link-mini-fb-bg" style="background:${cm.color}"></div>
-    <div class="link-mini-fb-icon">${cm.icon}</div>
-    <div class="link-mini-fb-domain" style="color:${cm.color}">${domain}</div>
+    <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=64" 
+         style="width:32px;height:32px;border-radius:8px"
+         onerror="this.outerHTML='<span style=font-size:24px>${CAT_MAP[ck]?.icon||'📁'}</span>'">
+    <div class="link-mini-fb-domain" style="color:var(--text3)">${domain}</div>
   </div>`;
 }
 
@@ -527,11 +527,11 @@ function linkThumbHtmlCard(l){
 }
 
 function linkFbCardStr(ck, domain){
-  const cm=CAT_MAP[ck]||CAT_MAP.other;
   return`<div class="link-card-fb">
-    <div class="link-card-fb-bg" style="background:${cm.color}"></div>
-    <div class="link-card-fb-icon">${cm.icon}</div>
-    <div class="link-card-fb-domain" style="color:${cm.color}">${domain}</div>
+    <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=64"
+         style="width:28px;height:28px;border-radius:6px"
+         onerror="this.outerHTML='<span style=font-size:20px>${CAT_MAP[ck]?.icon||'📁'}</span>'">
+    <div class="link-card-fb-domain" style="color:var(--text3)">${domain}</div>
   </div>`;
 }
 
