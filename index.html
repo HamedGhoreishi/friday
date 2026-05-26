@@ -71,7 +71,7 @@ body{height:100%;width:100%;overflow:hidden;background:var(--bg0);color:var(--te
 .page-title{font-size:20px;font-weight:700;color:var(--text1)}
 .page-sub{font-size:11px;color:var(--text3);font-family:var(--font-mono);margin-top:2px}
 
-/* BOTTOM NAV — 6 تب */
+/* BOTTOM NAV */
 .bottom-nav{position:relative;z-index:50;height:var(--nav-h);background:var(--nav-bg);border-top:1px solid var(--border);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-around;padding:0 2px;padding-bottom:env(safe-area-inset-bottom,0);flex-shrink:0}
 .nav-item{display:flex;flex-direction:column;align-items:center;gap:2px;flex:1;padding:6px 2px;cursor:pointer;border:none;background:transparent;color:var(--text3);transition:color var(--transition);position:relative}
 .nav-item.active{color:var(--accent)}
@@ -108,10 +108,9 @@ body{height:100%;width:100%;overflow:hidden;background:var(--bg0);color:var(--te
 .movie-mini-year{font-size:9px;color:rgba(255,255,255,0.5);font-family:var(--font-mono)}
 .movie-mini-rating{font-size:9px;color:#fbbf24;font-family:var(--font-mono)}
 
-/* ══ LINK MINI — fallback طراحی شده ══ */
+/* LINK MINI */
 .link-mini{flex-shrink:0;width:180px;border-radius:12px;overflow:hidden;background:var(--card-bg);border:1px solid var(--card-border);scroll-snap-align:start;text-decoration:none;display:flex;flex-direction:column}
 .link-mini-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
-/* fallback زیبا وقتی تامبنیل نداره */
 .link-mini-fb{width:100%;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;position:relative;overflow:hidden}
 .link-mini-fb-icon{font-size:24px;position:relative;z-index:1}
 .link-mini-fb-domain{font-size:9px;font-family:var(--font-mono);opacity:0.7;position:relative;z-index:1}
@@ -120,7 +119,7 @@ body{height:100%;width:100%;overflow:hidden;background:var(--bg0);color:var(--te
 .link-mini-name{font-size:11px;font-weight:600;color:var(--text1);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3}
 .link-mini-domain{font-size:9px;color:var(--text3);font-family:var(--font-mono);margin-top:3px;direction:ltr}
 
-/* ══ LINK CARD — fallback طراحی شده ══ */
+/* LINK CARD */
 .link-card{display:flex;align-items:center;border-radius:14px;background:var(--card-bg);border:1px solid var(--card-border);text-decoration:none;margin-bottom:8px;overflow:hidden;transition:all var(--transition)}
 .link-card:active{transform:scale(0.98)}
 .link-card-thumb{width:90px;flex-shrink:0;aspect-ratio:16/9;object-fit:cover;display:block}
@@ -144,16 +143,19 @@ body{height:100%;width:100%;overflow:hidden;background:var(--bg0);color:var(--te
 .arch-mini-preview{font-size:11px;color:var(--text2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.5}
 .arch-mini-date{font-size:10px;color:var(--text3);font-family:var(--font-mono);margin-top:6px}
 
-/* RECENT */
+/* RECENT — اصلاح شده */
 .recent-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-radius:12px;background:var(--card-bg);border:1px solid var(--card-border);margin-bottom:8px}
-.recent-avatar{width:34px;height:34px;border-radius:50%;background:var(--accent-glow);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:var(--accent);flex-shrink:0}
+.recent-avatar{width:40px;height:40px;border-radius:9px;background:var(--accent-glow);border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:var(--accent);flex-shrink:0}
+.recent-avatar-pixel{width:40px;height:40px;border-radius:9px;border:1.5px solid var(--accent);flex-shrink:0;image-rendering:pixelated;display:block}
 .recent-info{flex:1;min-width:0}
-.recent-name{font-size:13px;font-weight:500;color:var(--text1)}
+.recent-name{font-size:13px;font-weight:500;color:var(--text1);display:flex;align-items:center;flex-wrap:wrap;gap:4px}
 .recent-meta{font-size:10px;color:var(--text3);font-family:var(--font-mono);margin-top:2px}
-.answer-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
-.answer-pill{font-size:10px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:3px 8px;color:var(--text2)}
-.answer-pill .pill-q{color:var(--text3);margin-left:4px}
-.answer-pill .pill-t{color:var(--accent);font-family:var(--font-mono);margin-right:4px}
+.recent-theme-badge{font-size:9px;background:var(--bg3);border:1px solid var(--border);color:var(--text3);padding:2px 7px;border-radius:8px;font-family:var(--font-mono)}
+.answer-pills{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
+.answer-pill{font-size:10px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:4px 8px;color:var(--text2);display:flex;align-items:center;gap:4px;max-width:100%;flex-wrap:wrap}
+.answer-pill .pill-q{color:var(--text3);font-family:var(--font-mono);flex-shrink:0}
+.answer-pill .pill-t{color:var(--accent);font-family:var(--font-mono);font-size:9px;flex-shrink:0}
+.answer-pill .pill-ans{color:var(--text1);line-height:1.4}
 
 /* SEARCH */
 .search-wrap{position:relative;margin-bottom:12px}
@@ -295,7 +297,6 @@ body{height:100%;width:100%;overflow:hidden;background:var(--bg0);color:var(--te
   </div>
 
   <div class="pages" id="pages">
-
     <!-- HOME -->
     <div class="page active" id="page-home">
       <div class="page-header"><div class="page-title">خانه</div><div class="page-sub">// overview</div></div>
@@ -346,10 +347,8 @@ body{height:100%;width:100%;overflow:hidden;background:var(--bg0);color:var(--te
       <div class="page-header"><div class="page-title">آمار</div><div class="page-sub">// analytics</div></div>
       <div id="statsContent"><div class="loading-wrap"><div class="spinner"></div></div></div>
     </div>
-
   </div>
 
-  <!-- Bottom Nav — 6 تب -->
   <nav class="bottom-nav">
     <button class="nav-item active" data-page="home" onclick="navTo(this)">
       <div class="nav-indicator"></div><div class="nav-icon">🏠</div><span class="nav-label">خانه</span>
@@ -418,6 +417,98 @@ const CAT_MAP = {
   other: { icon:'📁', color:'#5a5a72', label:'سایر' }
 };
 
+/* ════ AVATAR PIXEL ART ════ */
+const AVATAR_DATA = {
+  "محافظه‌کار": { hair:"#5D3A1A", shirt:"#2C3E50", pants:"#1a252f", skin:"#FDDBB4" },
+  "ریسک‌پذیر":  { hair:"#111",    shirt:"#C0392B", pants:"#922B21", skin:"#FDDBB4" },
+  "تحلیلگر":    { hair:"#6D4C41", shirt:"#2471A3", pants:"#154360", skin:"#F5CBA7" },
+  "سوداگر":     { hair:"#E74C3C", shirt:"#F39C12", pants:"#D35400", skin:"#FDDBB4" },
+  "آزاد":       { hair:"#27AE60", shirt:"#1E8449", pants:"#196F3D", skin:"#FDDBB4" },
+  "رسمی":       { hair:"#2C1810", shirt:"#1B2A4A", pants:"#0d1b2e", skin:"#FDDBB4" },
+  "صرفه‌جو":    { hair:"#7D6608", shirt:"#B7950B", pants:"#7D6608", skin:"#FDDBB4" },
+  "نوآور":      { hair:"#8E44AD", shirt:"#9B59B6", pants:"#6C3483", skin:"#FDDBB4" }
+};
+const AVATAR_PIXELS = [
+  "  hhhh  ",
+  " hssssh ",
+  " hssssh ",
+  "  bbbb  ",
+  " bbbbbb ",
+  " bbbbbb ",
+  " pp  pp ",
+  " pp  pp "
+];
+
+function renderAvatarDataURL(avatarName, size) {
+  size = size || 40;
+  const colors = AVATAR_DATA[avatarName];
+  if (!colors) return null;
+  const canvas = document.createElement('canvas');
+  canvas.width = size; canvas.height = size;
+  const ctx = canvas.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
+  const map = { s: colors.skin, h: colors.hair, b: colors.shirt, p: colors.pants };
+  const rows = AVATAR_PIXELS;
+  const cw = size / 8, ch = size / rows.length;
+  rows.forEach((row, ri) => {
+    for (let ci = 0; ci < 8; ci++) {
+      const c = row[ci] || ' ';
+      const color = map[c];
+      if (!color) continue;
+      ctx.fillStyle = color;
+      ctx.fillRect(ci * cw, ri * ch, cw, ch);
+      ctx.fillStyle = 'rgba(0,0,0,0.12)';
+      ctx.fillRect(ci * cw + cw - 1, ri * ch, 1, ch);
+      ctx.fillRect(ci * cw, ri * ch + ch - 1, cw, 1);
+    }
+  });
+  return canvas.toDataURL();
+}
+
+/* ════ RECENT CARDS BUILDER ════ */
+function buildRecentHTML(recentArr) {
+  if (!recentArr || !recentArr.length) return '<div class="empty-state">// ثبتی وجود ندارد</div>';
+  return recentArr.map(r => {
+    // آواتار
+    const avatarDataURL = r.avatar ? renderAvatarDataURL(r.avatar, 40) : null;
+    const avatarHTML = avatarDataURL
+      ? `<img class="recent-avatar-pixel" src="${avatarDataURL}" title="${r.avatar}">`
+      : `<div class="recent-avatar">${(r.name || '?').charAt(0)}</div>`;
+
+    // تم badge
+    const themeBadge = r.theme
+      ? `<span class="recent-theme-badge">${r.theme}</span>`
+      : '';
+
+    // جواب‌ها
+    let pillsHTML = '';
+    if (r.answers && r.answers.length) {
+      const pills = r.answers.map(a => {
+        const timePart = a.time ? `<span class="pill-t">[${a.time}s]</span>` : '';
+        return `<div class="answer-pill">
+          <span class="pill-q">س${a.qId}:</span>
+          <span class="pill-ans">${a.answer}</span>
+          ${timePart}
+        </div>`;
+      }).join('');
+      pillsHTML = `<div class="answer-pills">${pills}</div>`;
+    }
+
+    return `<div class="recent-item">
+      ${avatarHTML}
+      <div class="recent-info">
+        <div class="recent-name">
+          ${r.name}
+          <span style="font-size:11px;color:var(--text3)">(${r.age} ساله)</span>
+          ${themeBadge}
+        </div>
+        <div class="recent-meta">${r.source || ''} — ${r.date || ''}</div>
+        ${pillsHTML}
+      </div>
+    </div>`;
+  }).join('');
+}
+
 /* ════ LOCK ════ */
 let pinInput='';
 function pinPress(n){if(pinInput.length>=4)return;pinInput+=n;updateDots();if(pinInput.length===4)setTimeout(checkPin,80)}
@@ -477,62 +568,29 @@ function getYtThumb(url){const m=url.match(/[?&]v=([^&]+)/)||url.match(/youtu\.b
 function catKey(cat){if(!cat)return'other';const c=cat.toLowerCase();if(c.includes('instagram'))return'ig';if(c.includes('youtube'))return'yt';if(c.includes('twitter')||c.includes('x.com'))return'tw';if(c.includes('telegram'))return'tg';if(c.includes('github'))return'gh';if(c.includes('web')||c.includes('article'))return'web';return'other'}
 function escSafe(s){return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\n/g,' ')}
 
-/* ════ LINK THUMBNAIL RENDERER ════
-   اگه thumbnail از backend داشت → نشون بده
-   اگه نداشت → fallback طراحی شده با رنگ و آیکون دسته
-*/
+/* ════ LINK THUMBNAILS ════ */
 function linkThumbHtmlMini(l){
   const ck=catKey(l.category);
   const cm=CAT_MAP[ck]||CAT_MAP.other;
-
-  // YouTube همیشه تامبنیل داره
-  if(ck==='yt'){
-    const src=getYtThumb(l.url);
-    if(src)return`<img class="link-mini-thumb" src="${src}" loading="lazy" onerror="this.parentElement.innerHTML=linkFbMini('${ck}','${getDomain(l.url)}')">`;
-  }
-
-  // اگه تامبنیل از شیت داریم
-  if(l.thumbnail){
-    return`<img class="link-mini-thumb" src="${l.thumbnail}" loading="lazy" onerror="this.parentElement.innerHTML=linkFbMiniStr('${ck}','${getDomain(l.url)}')">`;
-  }
-
-  // fallback طراحی شده
+  if(ck==='yt'){const src=getYtThumb(l.url);if(src)return`<img class="link-mini-thumb" src="${src}" loading="lazy" onerror="this.parentElement.innerHTML=linkFbMiniStr('${ck}','${getDomain(l.url)}')">"`;}
+  if(l.thumbnail)return`<img class="link-mini-thumb" src="${l.thumbnail}" loading="lazy" onerror="this.parentElement.innerHTML=linkFbMiniStr('${ck}','${getDomain(l.url)}')">`;
   return linkFbMiniStr(ck, getDomain(l.url));
 }
-
 function linkFbMiniStr(ck, domain){
-  return`<div class="link-mini-fb">
-    <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=64" 
-         style="width:32px;height:32px;border-radius:8px"
-         onerror="this.outerHTML='<span style=font-size:24px>${CAT_MAP[ck]?.icon||'📁'}</span>'">
-    <div class="link-mini-fb-domain" style="color:var(--text3)">${domain}</div>
-  </div>`;
+  const cm=CAT_MAP[ck]||CAT_MAP.other;
+  return`<div class="link-mini-fb"><div class="link-mini-fb-bg" style="background:${cm.color}"></div><div class="link-mini-fb-icon">${cm.icon}</div><div class="link-mini-fb-domain" style="color:${cm.color}">${domain}</div></div>`;
 }
-
 function linkThumbHtmlCard(l){
   const ck=catKey(l.category);
   const cm=CAT_MAP[ck]||CAT_MAP.other;
   const domain=getDomain(l.url);
-
-  if(ck==='yt'){
-    const src=getYtThumb(l.url);
-    if(src)return`<img class="link-card-thumb" src="${src}" loading="lazy" onerror="this.parentElement.innerHTML=linkFbCardStr('${ck}','${domain}')">`;
-  }
-
-  if(l.thumbnail){
-    return`<img class="link-card-thumb" src="${l.thumbnail}" loading="lazy" onerror="this.parentElement.innerHTML=linkFbCardStr('${ck}','${domain}')">`;
-  }
-
+  if(ck==='yt'){const src=getYtThumb(l.url);if(src)return`<img class="link-card-thumb" src="${src}" loading="lazy" onerror="this.parentElement.innerHTML=linkFbCardStr('${ck}','${domain}')">"`;}
+  if(l.thumbnail)return`<img class="link-card-thumb" src="${l.thumbnail}" loading="lazy" onerror="this.parentElement.innerHTML=linkFbCardStr('${ck}','${domain}')">`;
   return linkFbCardStr(ck, domain);
 }
-
 function linkFbCardStr(ck, domain){
-  return`<div class="link-card-fb">
-    <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=64"
-         style="width:28px;height:28px;border-radius:6px"
-         onerror="this.outerHTML='<span style=font-size:20px>${CAT_MAP[ck]?.icon||'📁'}</span>'">
-    <div class="link-card-fb-domain" style="color:var(--text3)">${domain}</div>
-  </div>`;
+  const cm=CAT_MAP[ck]||CAT_MAP.other;
+  return`<div class="link-card-fb"><div class="link-card-fb-bg" style="background:${cm.color}"></div><div class="link-card-fb-icon">${cm.icon}</div><div class="link-card-fb-domain" style="color:${cm.color}">${domain}</div></div>`;
 }
 
 /* ════ HOME ════ */
@@ -541,7 +599,6 @@ async function loadHome(){
     apiFetch('stats_data'),apiFetch('watchlist_data'),apiFetch('vault_data'),apiFetch('archive_data')
   ]);
 
-  // Stats
   if(statsData){
     document.getElementById('hv-total').textContent=statsData.total??'—';
     document.getElementById('hv-week').textContent=statsData.week??'—';
@@ -600,29 +657,8 @@ async function loadHome(){
       </div>`).join('');
   } else archEl.innerHTML='<div class="empty-state">// آرشیوی وجود ندارد</div>';
 
-  // آخرین ثبت‌ها
-  const recentEl=document.getElementById('homeRecent');
-  const recentArr=statsData&&statsData.recent?statsData.recent:[];
-  if(recentArr.length){
-    recentEl.innerHTML=recentArr.map(r=>{
-      let pills='';
-      if(r.answers&&r.answers.length){
-        pills='<div class="answer-pills">'+r.answers.map(a=>{
-          const t=a.time?`<span class="pill-t">[${a.time}s]</span>`:'';
-          const q=a.qId?`<span class="pill-q">Q${a.qId}:</span>`:'';
-          return`<div class="answer-pill">${q}${a.answer}${t}</div>`;
-        }).join('')+'</div>';
-      }
-      return`<div class="recent-item">
-        <div class="recent-avatar">${(r.name||'?').charAt(0)}</div>
-        <div class="recent-info">
-          <div class="recent-name">${r.name} <span style="font-size:11px;color:var(--text3)">(${r.age} ساله)</span></div>
-          <div class="recent-meta">${r.source||''} — ${r.date||''}</div>
-          ${pills}
-        </div>
-      </div>`;
-    }).join('');
-  } else recentEl.innerHTML='<div class="empty-state">// ثبتی وجود ندارد</div>';
+  // آخرین ثبت‌ها — با آواتار و جواب‌های کامل
+  document.getElementById('homeRecent').innerHTML = buildRecentHTML(statsData&&statsData.recent?statsData.recent:[]);
 }
 
 /* ════ LINKS ════ */
@@ -640,12 +676,10 @@ function renderLinks(){
     const lbl=CAT_MAP[k]?CAT_MAP[k].label:k;
     return`<div class="cat-pill ${k===linkCat?'active':''}" onclick="setLinkCat('${k}')">${lbl} (${v})</div>`;
   }).join('');
-
   let filtered=allLinks;
   if(linkCat!=='all')filtered=filtered.filter(l=>catKey(l.category)===linkCat);
   if(linkQ){const q=linkQ.toLowerCase();filtered=filtered.filter(l=>l.name.toLowerCase().includes(q)||l.url.toLowerCase().includes(q))}
   if(!filtered.length){document.getElementById('linkList').innerHTML='<div class="empty-state">// لینکی یافت نشد</div>';return}
-
   document.getElementById('linkList').innerHTML=filtered.map(l=>`
     <a class="link-card cat-${catKey(l.category)}" href="${l.url}" target="_blank" rel="noopener">
       <div class="link-side-bar"></div>
@@ -772,30 +806,11 @@ async function loadStats(){
     <div class="stat-big-card sb4"><div class="stat-big-icon">⚡</div><div class="stat-big-val">${data.chart?data.chart.reduce((a,c)=>a+(c.val||0),0):'—'}</div><div class="stat-big-lbl">جمع ۷ روز</div></div>
   </div>`;
 
-  let recentHtml='';
-  const recentArr=data.recent||[];
-  if(recentArr.length){
-    recentHtml='<div class="section-label">آخرین ثبت‌ها</div>'+recentArr.map(r=>{
-      let pills='';
-      if(r.answers&&r.answers.length){
-        pills='<div class="answer-pills">'+r.answers.map(a=>{
-          const t=a.time?`<span class="pill-t">[${a.time}s]</span>`:'';
-          const q=a.qId?`<span class="pill-q">Q${a.qId}:</span>`:'';
-          return`<div class="answer-pill">${q}${a.answer}${t}</div>`;
-        }).join('')+'</div>';
-      }
-      return`<div class="recent-item">
-        <div class="recent-avatar">${(r.name||'?').charAt(0)}</div>
-        <div class="recent-info">
-          <div class="recent-name">${r.name} <span style="font-size:11px;color:var(--text3)">(${r.age} ساله)</span></div>
-          <div class="recent-meta">${r.source||''} — ${r.date||''}</div>
-          ${pills}
-        </div>
-      </div>`;
-    }).join('');
-  }
+  const recentHtml = (data.recent && data.recent.length)
+    ? '<div class="section-label">آخرین ثبت‌ها</div>' + buildRecentHTML(data.recent)
+    : '';
 
-  el.innerHTML=bigCards+chartHtml+recentHtml;
+  el.innerHTML = bigCards + chartHtml + recentHtml;
 }
 
 /* ════ TOAST ════ */
